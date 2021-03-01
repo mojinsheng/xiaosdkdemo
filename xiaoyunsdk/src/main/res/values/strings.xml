@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">xiaoyunsdk</string>
+    <!--输入框的文字-->
+    <string name="input_hint_account">请输入账号</string>
+    <string name="input_hint_password">请输入密码</string>
+    <!--文本的文字-->
+    <string name="textview_regiter">去注册</string>
+    <string name="textview_forget">忘记密码?</string>
+    <string name="textview_forgame">进入游戏</string>
+    <string name="textview_quick_login">快捷登录方式</string>
+    <string name="textview_facebook">Facebook账号登录</string>
+    <string name="textview_palygame">试玩登录</string>
+
+</resources>
