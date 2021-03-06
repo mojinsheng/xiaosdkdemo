@@ -1,0 +1,33 @@
+<resources>
+    <style name="TR.SDKTransparent" parent="@android:style/Theme.Dialog">
+        <!-- 设置允许窗口半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 引用Android系统的动画半透明样式 -->
+        <item name="android:windowAnimationStyle">@null</item>
+        <!-- 设定窗口背景颜色 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 隐藏窗口标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowCloseOnTouchOutside">@null</item>
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">false</item>
+
+        <item name="android:listPreferredItemPaddingLeft">0dip</item>
+        <item name="android:listPreferredItemPaddingRight">0dip</item>
+        <item name="android:listPreferredItemPaddingStart">0dip</item>
+        <item name="android:listPreferredItemPaddingEnd">0dip</item>
+    </style>
+    <style name="tr_login_switch_btn">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/button_underlin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/tr_login_switch_selector</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

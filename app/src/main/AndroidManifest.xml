@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.form.xysdk.ui.activity.ContainerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:fitsSystemWindows="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TR.SDKTransparent"
+            />
     </application>
 
 </manifest>

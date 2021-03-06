@@ -1,22 +1,16 @@
-package com.form.xysdk.activity;
+package com.form.xysdk.ui.activity;
 
 
 import android.app.AlertDialog;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.Settings;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -24,15 +18,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import com.form.xysdk.ui.fragment.LoginFragment;
 import com.from.jmsdk.tools.Logger;
 import com.from.jmsdk.tools.ResourceUtils;
 
-import java.util.Observer;
-
-import static android.view.KeyEvent.KEYCODE_BACK;
-
 public class ContainerActivity extends FragmentActivity {
-//    protected SdkManager mManager;
+    //    protected SdkManager mManager;
 //    protected AdsEventListener mEvent;
     private FragmentManager manager;
     private FragmentTransaction transaction = null;
@@ -54,20 +45,17 @@ public class ContainerActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         // 无标题
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        Logger.info("=========================开始===========");
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(ResourceUtils.getLayoutIdByName(this, "base_activity_landscape"));
-        Logger.info("=========================1==========="+ResourceUtils.getLayoutIdByName(this, "base_activity_landscape"));
-
+        setContentView(ResourceUtils.getLayoutIdByName(this, "activity_login"));
+        Logger.setLogEnable(true);
         manager = getSupportFragmentManager();
         transaction = manager.beginTransaction();
-//        transaction.replace(ResourceUtils.getViewIdByName(this, "cl_login"), new AccountLoginFragment(), AccountLoginFragment.class.getSimpleName());
+        transaction.replace(ResourceUtils.getViewIdByName(this, "contentFrame"), new LoginFragment(), LoginFragment.class.getSimpleName());
 
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.commit();
-        Logger.info("=========================结束===========");
 
-       // initSdkListner();
+        // initSdkListner();
 //        if(!PermissionUtil.requestPermissions_PHONE_STORAGE(this, ConstantUI.MAIN_SD_CODE)){
 //            return;
 //        }

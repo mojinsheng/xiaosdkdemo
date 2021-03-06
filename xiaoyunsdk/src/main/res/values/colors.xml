@@ -3,5 +3,8 @@
     <color name="color_login">#2879FE</color>
     <color name="color_white">#ffffff</color>
     <color name="color_share">#DDDDDD</color>
+    <color name="color_title_bg">#3A3A3A</color>
+    <color name="color_textview">#999999</color>
+    <color name="transparent">#00000000</color>
 
 </resources>
